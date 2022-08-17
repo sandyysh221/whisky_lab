@@ -21,7 +21,7 @@ public class Whisky {
     @Column(name = "age")
     private int age;
 
-    @JsonIgnoreProperties({"whisky"})
+    @JsonIgnoreProperties({"whiskies"})
     @ManyToOne
     @JoinColumn(name = "distillery_id", nullable = false)
     private Distillery distillery;
