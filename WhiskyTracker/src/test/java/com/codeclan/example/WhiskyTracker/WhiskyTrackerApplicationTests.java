@@ -1,5 +1,6 @@
 package com.codeclan.example.WhiskyTracker;
 
+import com.codeclan.example.WhiskyTracker.models.Distillery;
 import com.codeclan.example.WhiskyTracker.models.Whisky;
 import com.codeclan.example.WhiskyTracker.repositories.DistilleryRepository;
 import com.codeclan.example.WhiskyTracker.repositories.WhiskyRepository;
@@ -33,4 +34,9 @@ public class WhiskyTrackerApplicationTests {
 		assertEquals(6, foundWhiskies.size());
 	}
 
+	@Test
+	public void canFindDistilleryByRegion() {
+		List<Distillery> foundDistilleries = distilleryRepository.findByRegion("Speyside");
+		assertEquals(3, foundDistilleries.size());
+	}
 }
